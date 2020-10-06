@@ -1,0 +1,136 @@
+
+/* The default style for theavgprogrammer */
+
+body {
+	line-height:150%;
+	margin: 60px 0px;
+	font-family: monospace;
+	background-color: #F1EEE3;
+	}
+	
+#main-header{
+	color:black;
+	padding: 10px;
+	text-align:center;
+	}
+		
+.post-container {
+	text-align: center;
+}
+
+.post {
+	width: 70%;
+	height: 100px;
+	text-align:left;
+	display: inline-block;
+	}
+		
+#main-footer{
+	text-align: center;
+	font-size:18px;
+	}
+
+a:link, a:visited, a:hover {
+	color: black;
+	text-decoration: none;
+	}
+	
+a:active {
+	color: yellow;
+	text-decoration: none;
+	}
+	
+.fa {
+	padding: 10px;
+	font-size: 25px;
+	width: 15px;
+	text-align: center;
+	text-decoration: none;
+	margin: 1px 1px;
+	}
+	
+.fa:hover {
+	opacity: 0.7;
+	}
+
+.fa-twitter {
+	background: #55ACEE;
+	color: white;
+	}
+
+.fa-youtube {
+	background: #bb0000;
+	color: white;
+	}
+	
+.fa-instagram {
+	background: #125688;
+	color: white;
+	}
+
+.fa-github {
+	background: #D3D3D3;
+	color: white;
+	}
+	
+hr {
+	width:70%;		
+	}
+
+/* Notes Page */
+
+.postFlex{
+	width: 850px;
+	height: 100px;
+	text-align:left;
+	display: inline-block;
+	}
+		
+#middle{
+	text-align: center;
+	}
+
+/* Inheritance Page */
+
+#diagram{
+		  text-align: center;
+		}
+
+/* About Page */
+
+.innerbox{
+	float: left;
+	padding-top: 20px;
+	margin-top: 15px;
+	margin-left: 0px;
+	margin-right: 20px;
+	margin-bottom: 0px;
+	min-width: 200px;
+	height: 150px;  
+	border-style: dashed;
+	border-width: 1.25px;
+    text-align: center;
+}		
+	 	 
+.outerbox {
+    display: inline-block;
+    text-align: left;
+	padding-top: 0px;
+	width: 70%;
+  	margin: 10px;
+}
+		
+#mark{
+	font-size: 50px;
+}
+
+/* Contact Page */
+
+textarea{
+	text-aligh:center;
+}
+		
+input{
+	text-align: center;
+}
+		
