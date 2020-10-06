@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>THE AVERAGE PROGRAMMER (Overloading Vs Overriding)</title>
+	<meta name="description" content="A programming blog by Y0551">
+	<meta name="keywords" content="programming, blog, java, journal, average, programmer, notes, Overloading Vs Overriding">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="default-style.css">
+	<script src="javaScript.js"></script> 
+</head>
+<body>
+	<header id="main-header">
+		<h2> <strong>THE AVERAGE PROGRAMMER</strong> </h2>
+		<nav>
+			<p>  <a href="index.html">Home | </a> 
+				<a href="notes.html">Notes | </a>			
+			    <a href="about.html">About | </a>
+				<a href="contact.html">Contact </a>
+			</p>
+		</nav>
+	</header>
+
+	
+	<section>
+		<article class="post-container">
+			<div class="post">
+			<h3><u> Overloading Methods Vs Overriding Methods </u></h3>
+			
+			
+			<p> &nbsp When you use inheritance, the extended class inherits all of the attributes and methods from the base class. 
+			Some of these methods may be useless to the extended class. The extended class can fix this probelm by either
+			overloading the useless method or overriding them. </p>
+
+			
+			<p> &nbsp Overriding does not mean destroying the parents's methods. It just means you are suppressing the parents’s methods. Overloading a method is not the same thing as overriding a method. 
+			An overridden method must look identical to the method it is overriding (same return type, same name, and same signature). 
+			An overloaded method has the same name but the parameters (signature) are different. </p>
+
+			<h4 class="post-container"> <u> Overloaded Method </u> </h4>
+
+			<p> public Boolean equals (Object obj) // Original Method <br>
+				public Boolean equals (ClassName a)// Overloaded Method (Different Parameters) </p>
+ 
+			<p> <strong> Note: </strong> When a derived class overloads a method, it still inherits the original method from the base class. </p>
+			
+			<h4 class="post-container"> <u> Overridden Method </u> </h4>
+ 
+			<p> public void setEmployeeName(String name) // Original Method (Base Class) <br>
+			    public void setEmployeeName(String name) // Overridden Method (Child Class) </p> 
+
+			<p> <strong> Note: </strong> If you want to call a suppressed method (an overloaded method) you need to use the keyword super (super.methodName()). 
+			If you want to use the overridden method, you can call it directly because it is public and anyone can call it. 
+			For example if you have two methods called setEmployeeName, if you want to call the parent's setEmployeeName use  
+			super.setEmployeeName() if you want to call the child’s setEmployeeName (overridden setEmployeeName) use setEmployeeName() or this.setEmployeeName() </p> 
+			
+			<h3> <u> Covariant Return Type </u> </h3>
+			
+			<p> &nbsp In Java 5.0 you can change the return type of an overridden method to any descendent class of that returned type. 
+			For example you can have a method called x and it returns an Employee object. 
+			You can have the same method x in a child class (overridden), but the return type can be an HourlyEmployee object. 
+			This is because a hourly employee is an employee.
+			</p> 
+			
+			<p> public Employee getEmployeeName()  // The base class method (original method) <br>
+			public HourlyEmployee getEmployeeName() // The derived class method (still an overridden method) 
+			</p>
+
+			<p> &nbsp You can also change the overridden method’s access rights from restrictive to less restrictive, 
+			but not from less restrictive to more restrictive. More on this later. 
+			</p>
+
+			<br>
+			<p class=post-container> <strong> Private ➡ Protected  ➡ Public </strong> <br> 
+			(You can <strong> not </strong> go the other way) <br>
+			<strong> Public x Protected x Private </strong> 
+			</p>
+			</div>
+		</article>
+	</section>
+	<br/>
+
+	<div class="post-container">
+		<strong> <a href="inheritance.html"> Prev  </a> </strong>
+		<strong> - </strong>
+		<strong> <a href="#"> Next  </a> </strong>
+	</div>
+
+	<br>
+	<br>
+	<hr/> 
+	
+
+	<footer id="main-footer">
+		<p>Copyright &copy; 2020, THE AVERAGE PROGRAMMER</p>
+		<!-- Add font awesome icons 
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-youtube"></a>
+		<a href="#" class="fa fa-instagram"></a>
+		<a href="https://github.com/Y0551" class="fa fa-github"></a> -->
+	</footer>
+</body>
+</html>
