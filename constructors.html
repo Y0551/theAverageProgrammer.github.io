@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>THE AVERAGE PROGRAMMER (THE SUPER CONSTRUCTOR)</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="A programming blog by Y0551">
+	<meta name="keywords" content="programming, blog, java, journal, average, programmer, notes, The Super Constructor">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="default-style.css">
+	<script src="javaScript.js"></script> 
+</head>
+<body>
+	<header id="main-header">
+		<h2> <strong>THE AVERAGE PROGRAMMER</strong> </h2>
+		<nav>
+			<p> <a href="index.html">Home | </a> 
+				<a href="notes.html">Notes | </a>			
+			    <a href="about.html">About | </a>
+				<a href="contact.html">Contact </a>
+			</p>
+		</nav>
+	</header>
+
+	
+	<section>
+		<article class="post-container">
+			<div class="post">
+				<h3 class="middle"> <u> Constructors </u> </h3>
+				<p> &nbsp When you create an object in java ( Object objectName = new Object() ), the “new Object” keyword calls the object’s constructor. The object’s constructor is written in the class definition and dictates how the object should be created. The constructor looks like a method but is not a method. You can have multiple constructors. You can have constructors that take parameters and ones that do not.  If a class does not have a constructor, then java will implement a default one for you. However, it is bad practice to omit a constructor when writing a class definition.
+				</p>
+				<h3 class="middle"> <u> The Super Constructor & The Default Constructor </u> </h3>
+				<p> &nbsp When you create an object from a derived class, the parents need to get created first. The parents get created through their constructor, so for example if you have a class HourlyEmployee which extends an Employee. Inside the HourlyEmployee constructor you need to call the Employee constructor. To do this you need to use the keyword super.  
+				</p>		
+				<p> &nbsp public HourlyEmplyee(String  name, int id, int wage){ <br>
+					&nbsp &nbsp super(name, id); // (Calling the parent’s parameterized constructor to create the parents.) <br>
+					&nbsp &nbsp this.wage = wage <br>
+					} 
+				</p>
+				<p> &nbsp The HourlyEmplyoee constructor takes 3 parameters. The first 2 parameters get passed to the parents (Employee) parameterized constructor. The last parameter applies to the HoulryEmployee attribute wage. Remember that when you are calling HourlyEmplyee he = new HourlyEmplyee () you are creating two objects: the HoulryEmployee object and the Employee object. 
+				</p>
+				<p> <strong> Note: </strong> If you do not specify how you want the parents to be created, java will use the default constructor. If you do not have a default constructor, java will implement one for you. However, if you do not have a default constructor but you have a parameterized constructor you will get an error because java will not implement a default constructor for you if you have a parametrized constructor, so be careful. 
+				</p>
+				<h3 class="middle"> <u> This Constructor Vs The Super Constructor </u> </h3>
+				<p> &nbsp Within the constructor of a class, the “this constructor” can be used to invoke another constructor 
+				of the same class. The super constructor is used to invoke the parents constructor. 
+				The rules for using the super & this constructor are as follows:
+				</p>
+				<ol>
+					<li> Inside a constructor the "this" constructor must be the first statement, </li>
+					<li> Inside a constructor the "Super" constructor must be the first statement. </li>
+					<li> Inside a constructor either "this" or "super" can be used, but not both. </li>
+				</ol>
+				<p> &nbsp The reason why you can’t have the “this” keyword and the “super” keyword inside a constructor is 
+				because you cannot have two set of parents. If you look at the following few lines of code:
+				</p>
+				<p> &nbsp public HourlyEmplyee(String  name, int id, int wage){ <br>
+				&nbsp &nbsp super (name, id); <br>
+				&nbsp &nbsp this (wage); <br>
+				}
+				</p>
+				<p> &nbsp When you call the “this(wage)” inside a constructor, the compiler goes and looks for another constructor 
+				(inside the same class) whose parameter is wage. Once the compiler finds that constructor the parents get created. 
+				</p>
+				<p> &nbsp When you call the “super(name, id)” inside a constructor, the compiler goes to the parents class, finds the matching constructor and creates the parents. 
+				</p>
+				<p> &nbsp Both constructors “this” and “super”, will create parents when they are called. Just like in real life you can't have two sets of parents.
+				</p>
+				<p> <strong> Note: </strong> The “this” constructor cannot be used to call different parent's constructors or grandparents constructors.  
+				</p>
+			</div>
+		</article>
+	</section>
+	<br/>
+	
+	<div class="post-container">
+		<strong> <a href="overloadingvsoverriding.html"> Prev  </a> </strong>
+		<strong> - </strong>
+		<strong> <a href=""> Next  </a> </strong>
+	</div>
+
+	<br>
+	<br>
+	<hr/> 
+
+	<footer id="main-footer">
+		<p>Copyright &copy; 2020, THE AVERAGE PROGRAMMER</p>
+		<!-- Add font awesome icons 
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-youtube"></a>
+		<a href="#" class="fa fa-instagram"></a>
+		<a href="https://github.com/Y0551" class="fa fa-github"></a> 
+		-->
+	</footer>
+</body>
+</html>
