@@ -1,10 +1,13 @@
 
 // Embeded javascript 
 
-function collapsible() {
-	var x = document.getElementById("myDIV");
-	var y = document.getElementById("q");
-	if (x.style.display === "block") {
+function toggleOnOff(num) {
+	
+	
+	var x = document.getElementById("threeDots"+num);
+	var y = document.getElementById("restOfParagraphs"+num);
+	
+	if (x.style.display === "block" || x.style.display === "") {
 		x.style.display = "none";
 		y.style.display = "block";
 	} 
