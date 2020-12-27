@@ -4,7 +4,7 @@
 function toggleOnOff(num) {
 	
 	
-	var x = document.getElementById("threeDots"+num);
+	var x = document.getElementById("more-less"+num);
 	var y = document.getElementById("restOfParagraphs"+num);
 	
 	if (x.style.display === "block" || x.style.display === "") {
