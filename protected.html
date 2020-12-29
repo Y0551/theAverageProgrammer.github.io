@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>THE AVERAGE PROGRAMMER (Protected, Package, & Private)</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="A programming blog by Y0551">
+	<meta name="keywords" content="programming, blog, java, journal, average, programmer, notes, protected, private, package">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="default-style.css">
+	<script src="javaScript.js"></script> 
+</head>
+<body>
+	<header id="main-header">
+		<h2> <strong>THE AVERAGE PROGRAMMER</strong> </h2>
+		<nav>
+			<p>  <a href="index.html">Home | </a> 
+				<a href="notes.html">Notes | </a>			
+			    <a href="about.html">About | </a>
+				<a href="contact.html">Contact </a>
+			</p>
+		</nav>
+	</header>
+
+	
+	<section>
+		<article class="post-container">
+			<div class="post">
+			<h3 class="middle"><u> Private, Protected, & Package </u></h3>
+			
+			
+			<p> &nbsp When you extended a class, the class inherits all of the attributes and methods from the base (parent) class.  If these methods or attributes are private (private int a), then no one can access them / manipulate them directly. Not the class’s children. Not the class’s friends (two or more classes in the same package). No one. This can be very frustrating. Whenever you are outside of the class and you want to manipulate the class’s private attributes you must use the public accessor and public mutator methods. For this reason, Java created something called protected access. Protected access is less strict than private access, and as a result should be used only when necessary. 
+			</p>
+			
+			<p> &nbsp Protected access allows the children to see / manipulate attributes that were inherited from their parents. In addition, protected access gives friends (two or more classes in the same package) the ability to see / manipulate attributes and methods that are in the same package. This is one of the reasons you need to be careful about using the default package.  
+			</p>
+			
+			<div class="photo">
+				<img src="../../package image.png" alt="Diagram">
+			</div>
+			<p> &nbsp Class C can access v3 not because class C is a child of class A. Rather class C is in the same package as class A and therefore has package access.
+			</p>
+			<p> &nbsp Class B can access v2 and v3 just because it's in the same package as class A. This can lead to a multitude of problems especially if you use the default package. Classes can end up in the same package, and have access to things they should not have access to.
+			</p>
+			
+			
+		</article>
+	</section>
+	<br/>
+
+	<div class="post-container">
+		<strong> <a href="constructors.html"> Prev  </a> </strong>
+		<strong> - </strong>
+		<strong> <a href="#"> Next  </a> </strong>
+	</div>
+
+	<br>
+	<br>
+	<hr/> 
+	
+
+	<footer id="main-footer">
+		<p>Copyright &copy; 2020, THE AVERAGE PROGRAMMER</p>
+		<!-- Add font awesome icons 
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-youtube"></a>
+		<a href="#" class="fa fa-instagram"></a>
+		<a href="https://github.com/Y0551" class="fa fa-github"></a> -->
+	</footer>
+</body>
+</html>
