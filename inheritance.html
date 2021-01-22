@@ -29,7 +29,7 @@
 			<h3 class="middle"><u> Inheritance </u></h3>
 			<p> &nbsp  Inheritance is one of the main techniques of object-oriented programming. It takes a regular class and extends it so that a more sophisticated class can be created. 
 			Suppose you have a bunch of different classes: an Employee class, a HourlyEmployee class, a SalariedEmployee class, a FullTimeHourlyEmployee class, and a ParttimeEmployee class.
-			Each class represents a different kind of employee. Normally, you would of had to code each class separately. 
+			Each class represents a different kind of employee. Normally, you would code each class separately. 
 			However with inheritance you can code one base class (Employee) and derive all of the other classes from that one base class.   
 			</p> <br>
 <pre id="diagram"> Employee
@@ -45,7 +45,7 @@ FullTimeHourlyEmployee ParttimeEmployee
 			In the above case (of the employees) it does makes sense to use inheirtance because all of the classes are different kinds of employees. 
 			
 			<p> &nbsp Inheirtance in programming is similiar to that of a child inheriting something from his or her parents. Usually, the child inherits all of the possessions of 
-			his or her parents so to the extended class (the child) inherits all of the attributes and methods from the base class (the parent’s). 
+			his or her parents so to the extended class (the child) inherits all of the attributes and methods from the base class (all of the parent’s possessions). 
 			The syntax for creating a child class is: public class ClassName extends BaseClassName(){...} </p>
 			
 			<p> &nbsp Inheritance is great, but there are a few things you must keep in mind: </p>
@@ -53,26 +53,32 @@ FullTimeHourlyEmployee ParttimeEmployee
 			<ol>
 			  <li>When you create an object from a derived class, the parent (the base class) also gets created. You cannot have a child without a parent.</li>
 			  <li>The parent always gets created before the child. Be careful about implementing constructors. (More on this later)</li>
-			  <li> If the parents’s attributes are private, you can not access / manipulate them directly even though you inherited them and they are your own. You must go to the parent and ask.</li>
-			  <li> A child can call any one of his parent’s methods. </li>
+			  <li> If the parents’s attributes are private, you can not access / manipulate them directly even though you inherited them. You have to ask your parents for permission.</li>
+			  <li> A child can call any one of his parent’s methods as long as they are public. </li>
 			  <li> A child can use any one of his parent’s constructors. The syntax is: super(); (More on this later) </li>
-			  <li> A child can not call his or her parent’s attributes if they are private by using super.attribute() (even if the child inherited them and they are now his). The child has to go through the public methods (ask his or her parent for permission). (Look at rule 4) </li>
+			  <li> A child can not call his or her parent’s attributes if they are private by using super.attribute() (even if the child inherited them and they are now his). The child has to go through the public methods (ask his or her parent for permission). (Look at rule 3) </li>
 			</ol> 
 			
 			<h3 class="middle"> <u> The is-a relationship between a derived class and a base class. </u> </h3>
 			
 			<p> &nbsp A derived class (a child class) is just a sophisticated version of the base class (the parent). 
 			This means if you pass a HourlyEmployee object inside a function taking an Employeee parameter, 
-			there will be no compiler error. A HourlyEmployee is just an Employee. However, if you pass an Employee object inside a function taking a HourlyEmployee parameter, 
-			you will get an error because an Employeee is not a HourlyEmployee. An employee could be an a hourly employee, a salaried employee, a full time hourly employee, a part time employee, etc. 
+			there will be no compiler error. A HourlyEmployee is just an Employee. However, if you pass an Employee object inside a function taking a HourlyEmployee parameter, you will get an error because an Employeee is not a HourlyEmployee. 
 			</p>
- 
-			<h3 class="middle"> <u> The final Modifier </u> </h3>
 			
-			<p> &nbsp If you add the word final to a method ( final public void MethodName() ), 
+			<p class=post-container> 
+				<strong> FullTimeHourlyEmployee ➡ HourlyEmployee ➡ Employee </strong> <br> 
+				(You can <strong> not </strong> go the other way) <br>
+				<strong> Employee x HourlyEmployee x FullTimeHourlyEmployee </strong> 
+			</p>
+			
+ 
+			<h3 hidden class="middle"> <u> The final Modifier </u> </h3>
+			
+			<p hidden> &nbsp If you add the word final to a method ( final public void MethodName() ), 
 			no one can come and override that method. Not even the extended class (ie the children).  
 			</p>
-			<p> &nbsp If you add the word final to a class ( final public class ClassName{} ), you can no longer extend that class.
+			<p hidden> &nbsp If you add the word final to a class ( final public class ClassName{} ), you can no longer extend that class.
 			</p>
 
 			<p hidden> <strong> To Recap: </strong> Taking a class and extending it so that other classes can be created is known as inheirtance
@@ -93,7 +99,7 @@ FullTimeHourlyEmployee ParttimeEmployee
 	<hr/> 
    
 	<footer id="main-footer">
-		<p>Copyright &copy; 2020, THE AVERAGE PROGRAMMER</p>
+		<p>Copyright &copy; 2021, THE AVERAGE PROGRAMMER</p>
 		<!-- Add font awesome icons 
 		<a href="#" class="fa fa-twitter"></a>
 		<a href="#" class="fa fa-youtube"></a>

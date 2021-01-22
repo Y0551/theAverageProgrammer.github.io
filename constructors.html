@@ -27,7 +27,7 @@
 		<article class="post-container">
 			<div class="post">
 				<h3 class="middle"> <u> Constructors </u> </h3>
-				<p> &nbsp When you create an object in java ( Object objectName = new Object() ), the “new Object” keyword calls the object’s constructor. The object’s constructor is written in the class definition and dictates how the object should be created. The constructor looks like a method but is not a method. You can have multiple constructors. You can have constructors that take parameters and ones that do not.  If a class does not have a constructor, then java will implement a default one for you. However, it is bad practice to omit a constructor when writing a class definition.
+				<p> &nbsp When you create an object in Java ( Object objectName = new Object() ), the “new” keyword calls the object’s constructor. The object’s constructor is written in the class definition and dictates how the object should be created. The constructor looks like a method but it's not a method. You can have multiple constructors. You can have constructors that take parameters and ones that do not.  If a class does not have a constructor, then Java will implement a default one for you. However, it is bad practice to omit a constructor when writing a class definition.
 				</p>
 				<h3 class="middle"> <u> The Super Constructor & The Default Constructor </u> </h3>
 				<p> &nbsp When you create an object from a derived class, the parents need to get created first. The parents get created through their constructor, so for example if you have a class HourlyEmployee which extends an Employee. Inside the HourlyEmployee constructor you need to call the Employee constructor. To do this you need to use the keyword super.  
@@ -37,9 +37,9 @@
 					&nbsp &nbsp this.wage = wage <br>
 					} 
 				</p>
-				<p> &nbsp The HourlyEmplyoee constructor takes 3 parameters. The first 2 parameters get passed to the parents (Employee) parameterized constructor. The last parameter applies to the HoulryEmployee attribute wage. Remember that when you are calling HourlyEmplyee he = new HourlyEmplyee () you are creating two objects: the HoulryEmployee object and the Employee object. 
+				<p> &nbsp The HourlyEmplyoee constructor takes 3 parameters. The first 2 parameters get passed to the parents (Employee) parameterized constructor. The last parameter applies to the HoulryEmployee attribute wage. Remember that when you are calling HourlyEmplyee hourlyEmplyee = new HourlyEmplyee () you are creating two objects: the HoulryEmployee object and the Employee object. 
 				</p>
-				<p> <strong> Note: </strong> If you do not specify how you want the parents to be created, java will use the default constructor. If you do not have a default constructor, java will implement one for you. However, if you do not have a default constructor but you have a parameterized constructor you will get an error because java will not implement a default constructor for you if you have a parametrized constructor, so be careful. 
+				<p> <strong> Note: </strong> If you do not specify how you want the parents to be created, Java will use the default constructor. If you do not have a default constructor, Java will implement one for you. However, if you do not have a default constructor but you have a parameterized constructor you will get an error because Java will not implement a default constructor for you if you have a parametrized constructor, so be careful. 
 				</p>
 				<h3 class="middle"> <u> The "This" Constructor Vs The "Super" Constructor </u> </h3>
 				<p> &nbsp Within the constructor of a class, the “this constructor” can be used to invoke another constructor 
@@ -84,7 +84,7 @@
 	<hr/> 
 
 	<footer id="main-footer">
-		<p>Copyright &copy; 2020, THE AVERAGE PROGRAMMER</p>
+		<p>Copyright &copy; 2021, THE AVERAGE PROGRAMMER</p>
 		<!-- Add font awesome icons 
 		<a href="#" class="fa fa-twitter"></a>
 		<a href="#" class="fa fa-youtube"></a>
