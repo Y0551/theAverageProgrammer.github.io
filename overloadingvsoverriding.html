@@ -30,33 +30,41 @@
 			
 			<p> &nbsp When you use inheritance, the extended class inherits all of the attributes and methods from the base class. 
 			Some of these methods may be useless to the extended class. The extended class can fix this problem by either
-			overloading the useless method or overriding them. </p>
-
+			overloading the useless methods or overriding them. </p>
+			<p> &nbsp Overloading a method is not the same thing as overriding a method. An overloaded method has the same name as the original method, but not the same parameters. In other words the signature betweeen the two methods are different. An overridden method must have the same name and the same parameters. Two methods that override each other have to look identical (same return type, same name, and same signature).
+			</p>
 			
-			<p> &nbsp Overriding does not mean destroying the parents's methods. It just means you are suppressing the parents’s methods. Overloading a method is not the same thing as overriding a method. 
-			An overridden method must look identical to the method it is overriding (same return type, same name, and same signature). 
-			An overloaded method has the same name but the parameters (signature) are different. </p>
+			<h4 class="post-container"> <u> An Overloaded Method </u> </h4>
 
-			<h4 class="post-container"> <u> Overloaded Method </u> </h4>
-
-			<p> public Boolean equals (Object obj) // Original Method <br>
-				public Boolean equals (ClassName a)// Overloaded Method (Different Parameters) </p>
+			<p> public Boolean equals (int a) // Original Method <br>
+				public Boolean equals (int a, int b) // Overloaded Method (Different Parameters) </p>
+			</p>
  
+			<p> &nbsp If you try to change just the return type, you will get an error. </p> 
+			
+			<p>
+			public <strong> int </strong> equals (int a, int b)  <br>
+			public <strong> Boolean </strong> equals (int a, int b)  
+			</p>
+			
+			<p> &nbsp If you want to use an overloaded method, you can call it directly because it is public and anyone can call it. 
+			</p>
+			
 			<p> <strong> Note: </strong> When a derived class overloads a method, it still inherits the original method from the base class. </p>
 			
-			<h4 class="post-container"> <u> Overridden Method </u> </h4>
+			<h4 class="post-container"> <u> An Overridden Method </u> </h4>
  
+			<p> Overriding a method does not mean destroying the parents's method. It just means suppressing the parents’s method. </p>
+	
 			<p> public void setEmployeeName(String name) // Original Method (Base Class) <br>
 			    public void setEmployeeName(String name) // Overridden Method (Child Class) </p> 
 
-			<p> <strong> Note: </strong> If you want to call a suppressed method (an overloaded method) you need to use the keyword super (super.methodName()). 
-			If you want to use the overridden method, you can call it directly because it is public and anyone can call it. 
-			For example if you have two methods called setEmployeeName, if you want to call the parent's setEmployeeName use  
-			super.setEmployeeName() if you want to call the child’s setEmployeeName (overridden setEmployeeName) use setEmployeeName() or this.setEmployeeName() </p> 
+			<p> <strong> Note: </strong> If you want to call a suppressed method (an overridden method) you need to use the keyword super (super.methodName()). For example if you have two methods called setEmployeeName, if you want to call the parent's setEmployeeName use  
+			super.setEmployeeName() if you want to call the child’s setEmployeeName (overridden setEmployeeName) use setEmployeeName() or this.setEmployeeName(). </p> 
 			
 			<h3 class="middle"> <u> Covariant Return Type </u> </h3>
 			
-			<p> &nbsp In Java 5.0 you can change the return type of an overridden method to any descendent class of that returned type. 
+			<p> &nbsp In Java 5.0 you can change the return type of an overridden method to that of any descendent class of that returned type. 
 			For example you can have a method called x and it returns an Employee object. 
 			You can have the same method x in a child class (overridden), but the return type can be an HourlyEmployee object. 
 			This is because a hourly employee is an employee.
@@ -91,7 +99,7 @@
 	
 
 	<footer id="main-footer">
-		<p>Copyright &copy; 2020, THE AVERAGE PROGRAMMER</p>
+		<p>Copyright &copy; 2021, THE AVERAGE PROGRAMMER</p>
 		<!-- Add font awesome icons 
 		<a href="#" class="fa fa-twitter"></a>
 		<a href="#" class="fa fa-youtube"></a>
